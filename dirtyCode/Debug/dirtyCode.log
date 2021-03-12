@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\hp power\source\repos\dirtycode\dirtycode\main.cpp(15): warning C4101: 'b': unreferenced local variable
+c:\users\hp power\source\repos\dirtycode\dirtycode\main.cpp(15): warning C4101: 'c': unreferenced local variable
+  dirtyCode.vcxproj -> C:\Users\HP POWER\source\repos\dirtyCode\Debug\dirtyCode.exe
