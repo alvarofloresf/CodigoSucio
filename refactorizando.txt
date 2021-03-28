@@ -1,0 +1,29 @@
+Code Smell 1:
+14-16
+identificadores excesivamente cortos
+refactoriando variables globales y constantes, nombres de variables mas entendibles
+5-7
+Code Smell 2:
+17-22
+identificadores excesivamente cortos
+eliminar variables no usadas y refactorizando la funcion de lectura de archivo
+9-19
+Code Smell 3:
+27-30
+codigo largo
+se creo un nuevo metodo para poder identificar el numero mayor
+21-25
+Code Smell 4:
+23-33
+metodo grande
+se creo un metodo nuevo para el ordenamiento
+27-32
+Code Smell 5:
+4-11
+funcion innecesaria y duplicada
+cambiar de funcion a metodo ya que no sirve de nada un boolean
+34-38
+Code Smell 6:
+39-42
+if innecesario
+se elimino el if ya que no es necesario

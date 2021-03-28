@@ -1,46 +1,46 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-bool mostrar(int a[])
+
+const int sizeVector = 10;
+const string file = "numeros.txt";
+int vector[sizeVector];
+
+void readArchive()
 {
-	for (int i = 0; i < 10; i++)
+	int cont = 0; 
+	ifstream file(file);
+	while (!file.eof())
 	{
-		cout << a[i] << endl;
+		file >> vector[cont];
+		cont++;
 	}
-	return true;
+	file.close();
 }
+
+void verifyMajor(int index1, int index2)
+{
+	if (vector[index1] > vector[index2])
+		swap(vector[index1], vector[index2]);
+}
+
+void sort()
+{
+	for (int i = 0; i < sizeVector - 1; i++)
+		for (int j = i + 1; j < sizeVector; j++)
+			verifyMajor(i, j);
+}
+
+void showVector()
+{
+	for (int i = 0; i < sizeVector; i++)
+		cout << vector[i] << endl; 
+}
+
 int main()
 {
-	int a[10];
-	int b, c, d = 0;
-	ifstream e("numeros.txt");
-	while (!e.eof())
-	{
-		e >> a[d];
-		d++;
-	}
-	e.close();
-	for (int i = 0; i < 10 - 1; i++)
-	{
-		for (int j = i + 1; j < 10; j++)
-		{
-			if (a[i] > a[j])
-			{
-				swap(a[i], a[j]);
-			}
-
-		}
-	}
-	for (int i = 0; i < 10; i++)
-	{
-		cout << a[i] << endl;
-	}
-	
-	if (mostrar(a))
-	{
-		cout << "vector mostrado";
-	}
-
+	readArchive();
+	sort();
+	showVector();´
 	return 0;
-	system("pause");
 }
